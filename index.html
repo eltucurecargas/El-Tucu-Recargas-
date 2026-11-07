@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Tucu Recargas</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#10121c;
+ color:white;
+}
+header{
+ background:#191d2c;
+ padding:25px 15px;
+ text-align:center;
+ border-bottom:2px solid #ffbd35;
+}
+header h1{color:#ffbd35;margin:0}
+header p{color:#ccc}
+main{max-width:900px;margin:auto;padding:20px}
+h2{color:#ffbd35;text-align:center}
+.presentacion{
+ text-align:center;
+ padding:25px 10px;
+}
+.productos{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+ gap:15px;
+}
+.producto{
+ background:#202538;
+ padding:20px 10px;
+ border-radius:12px;
+ text-align:center;
+ border:1px solid #343b52;
+}
+.producto h3{color:#ffbd35}
+.precio{font-size:19px;font-weight:bold}
+button{
+ background:#ffbd35;
+ color:#171717;
+ border:0;
+ padding:12px 20px;
+ border-radius:8px;
+ font-weight:bold;
+ cursor:pointer;
+}
+.contacto{
+ text-align:center;
+ margin:35px 0;
+}
+footer{
+ text-align:center;
+ padding:20px;
+ color:#aaa;
+ background:#191d2c;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>EL TUCU RECARGAS</h1>
+<p>Tu tienda online de recargas Free Fire</p>
+</header>
+
+<main>
+<section class="presentacion">
+<h2>¡Bienvenido!</h2>
+<p>Conseguí tus diamantes y recargá de manera fácil y segura.</p>
+<p>Atención personalizada por WhatsApp.</p>
+</section>
+
+<h2>💎 CATÁLOGO DE DIAMANTES</h2>
+
+<section class="productos">
+<div class="producto">
+<h3>110 Diamantes</h3>
+<p class="precio">Consultar precio</p>
+<button onclick="pedir('110 Diamantes')">Comprar</button>
+</div>
+
+<div class="producto">
+<h3>341 Diamantes</h3>
+<p class="precio">Consultar precio</p>
+<button onclick="pedir('341 Diamantes')">Comprar</button>
+</div>
+
+<div class="producto">
+<h3>572 Diamantes</h3>
+<p class="precio">Consultar precio</p>
+<button onclick="pedir('572 Diamantes')">Comprar</button>
+</div>
+
+<div class="producto">
+<h3>1166 Diamantes</h3>
+<p class="precio">Consultar precio</p>
+<button onclick="pedir('1166 Diamantes')">Comprar</button>
+</div>
+
+<div class="producto">
+<h3>2398 Diamantes</h3>
+<p class="precio">Consultar precio</p>
+<button onclick="pedir('2398 Diamantes')">Comprar</button>
+</div>
+
+<div class="producto">
+<h3>6160 Diamantes</h3>
+<p class="precio">Consultar precio</p>
+<button onclick="pedir('6160 Diamantes')">Comprar</button>
+</div>
+</section>
+
+<section class="contacto">
+<h2>📲 HACÉ TU PEDIDO</h2>
+<p>Elegí tu paquete y consultanos por WhatsApp.</p>
+<button onclick="pedir('Consulta general')">
+CONTACTAR POR WHATSAPP
+</button>
+</section>
+</main>
+
+<footer>
+<p>© 2026 El Tucu Recargas</p>
+<p>Tu tienda de confianza 💎</p>
+</footer>
+
+<script>
+const WHATSAPP = "549XXXXXXXXXX";
+
+function pedir(producto){
+ if(WHATSAPP.includes("X")){
+  alert("Próximamente configuraremos el número de WhatsApp.");
+  return;
+ }
+ const mensaje = encodeURIComponent(
+  "Hola! Quiero consultar por: " + producto
+ );
+ window.open("https://wa.me/"+WHATSAPP+"?text="+mensaje,"_blank");
+}
+</script>
+
+</body>
+</html>
